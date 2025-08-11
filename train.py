@@ -95,7 +95,7 @@ def train(
     model = AutoModelForCausalLM.from_pretrained(
         base_model,
         torch_dtype=torch.bfloat16,
-        device_map=device_map,
+        # device_map=device_map, # updated by m. song, aug 10 2025
     )
 
     print(model)
